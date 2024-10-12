@@ -59,15 +59,16 @@
             // novaToolStripMenuItem
             // 
             novaToolStripMenuItem.Name = "novaToolStripMenuItem";
-            novaToolStripMenuItem.Size = new Size(156, 34);
+            novaToolStripMenuItem.Size = new Size(270, 34);
             novaToolStripMenuItem.Text = "Nova";
             novaToolStripMenuItem.Click += novaToolStripMenuItem_Click;
             // 
             // listaToolStripMenuItem
             // 
             listaToolStripMenuItem.Name = "listaToolStripMenuItem";
-            listaToolStripMenuItem.Size = new Size(156, 34);
+            listaToolStripMenuItem.Size = new Size(270, 34);
             listaToolStripMenuItem.Text = "Lista";
+            listaToolStripMenuItem.Click += listaToolStripMenuItem_Click;
             // 
             // locaçõesToolStripMenuItem
             // 
