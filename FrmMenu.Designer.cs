@@ -59,14 +59,14 @@
             // novaToolStripMenuItem
             // 
             novaToolStripMenuItem.Name = "novaToolStripMenuItem";
-            novaToolStripMenuItem.Size = new Size(270, 34);
+            novaToolStripMenuItem.Size = new Size(156, 34);
             novaToolStripMenuItem.Text = "Nova";
             novaToolStripMenuItem.Click += novaToolStripMenuItem_Click;
             // 
             // listaToolStripMenuItem
             // 
             listaToolStripMenuItem.Name = "listaToolStripMenuItem";
-            listaToolStripMenuItem.Size = new Size(270, 34);
+            listaToolStripMenuItem.Size = new Size(156, 34);
             listaToolStripMenuItem.Text = "Lista";
             listaToolStripMenuItem.Click += listaToolStripMenuItem_Click;
             // 
@@ -99,11 +99,13 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 192, 128);
             ClientSize = new Size(800, 450);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "FrmMenu";
-            Text = "Menu";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Locadora App";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

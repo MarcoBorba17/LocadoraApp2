@@ -35,7 +35,7 @@
             label3 = new Label();
             cmbGenero = new ComboBox();
             label4 = new Label();
-            numericUpDown1 = new NumericUpDown();
+            numCodigo = new NumericUpDown();
             cmbClassificacao = new ComboBox();
             label5 = new Label();
             label6 = new Label();
@@ -43,10 +43,12 @@
             numDuracao = new NumericUpDown();
             label8 = new Label();
             txtSinopse = new TextBox();
-            button1 = new Button();
-            button3 = new Button();
+            btnSalvar = new Button();
+            btnCancelar = new Button();
             dateTimePicker1 = new DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            btnEditar = new Button();
+            btnApagar = new Button();
+            ((System.ComponentModel.ISupportInitialize)numCodigo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numDuracao).BeginInit();
             SuspendLayout();
             // 
@@ -109,13 +111,13 @@
             label4.TabIndex = 6;
             label4.Text = "Código";
             // 
-            // numericUpDown1
+            // numCodigo
             // 
-            numericUpDown1.Location = new Point(17, 51);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.ReadOnly = true;
-            numericUpDown1.Size = new Size(375, 31);
-            numericUpDown1.TabIndex = 7;
+            numCodigo.Location = new Point(17, 51);
+            numCodigo.Name = "numCodigo";
+            numCodigo.ReadOnly = true;
+            numCodigo.Size = new Size(375, 31);
+            numCodigo.TabIndex = 7;
             // 
             // cmbClassificacao
             // 
@@ -179,24 +181,23 @@
             txtSinopse.Size = new Size(781, 68);
             txtSinopse.TabIndex = 15;
             // 
-            // button1
+            // btnSalvar
             // 
-            button1.Location = new Point(513, 389);
-            button1.Name = "button1";
-            button1.Size = new Size(141, 49);
-            button1.TabIndex = 16;
-            button1.Text = "Salvar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnSalvar.Location = new Point(513, 389);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(141, 49);
+            btnSalvar.TabIndex = 16;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnCancelar
             // 
-            button3.Location = new Point(660, 389);
-            button3.Name = "button3";
-            button3.Size = new Size(141, 49);
-            button3.TabIndex = 18;
-            button3.Text = "Cancelar";
-            button3.UseVisualStyleBackColor = true;
+            btnCancelar.Location = new Point(660, 389);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(141, 49);
+            btnCancelar.TabIndex = 18;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -206,15 +207,38 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(300, 31);
             dateTimePicker1.TabIndex = 19;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            // 
+            // btnEditar
+            // 
+            btnEditar.Location = new Point(366, 389);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(141, 49);
+            btnEditar.TabIndex = 20;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += button1_Click;
+            // 
+            // btnApagar
+            // 
+            btnApagar.Location = new Point(219, 389);
+            btnApagar.Name = "btnApagar";
+            btnApagar.Size = new Size(141, 49);
+            btnApagar.TabIndex = 21;
+            btnApagar.Text = "Apagar";
+            btnApagar.UseVisualStyleBackColor = true;
             // 
             // FrmNovaMidia
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightSalmon;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnApagar);
+            Controls.Add(btnEditar);
             Controls.Add(dateTimePicker1);
-            Controls.Add(button3);
-            Controls.Add(button1);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnSalvar);
             Controls.Add(txtSinopse);
             Controls.Add(label8);
             Controls.Add(numDuracao);
@@ -222,7 +246,7 @@
             Controls.Add(label6);
             Controls.Add(cmbClassificacao);
             Controls.Add(label5);
-            Controls.Add(numericUpDown1);
+            Controls.Add(numCodigo);
             Controls.Add(label4);
             Controls.Add(cmbGenero);
             Controls.Add(label3);
@@ -231,8 +255,9 @@
             Controls.Add(txtTitulo);
             Controls.Add(label1);
             Name = "FrmNovaMidia";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Nova Midia";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numCodigo).EndInit();
             ((System.ComponentModel.ISupportInitialize)numDuracao).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -247,7 +272,7 @@
         private Label label3;
         private ComboBox cmbGenero;
         private Label label4;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown numCodigo;
         private ComboBox cmbClassificacao;
         private Label label5;
         private Label label6;
@@ -255,8 +280,10 @@
         private NumericUpDown numDuracao;
         private Label label8;
         private TextBox txtSinopse;
-        private Button button1;
-        private Button button3;
+        private Button btnSalvar;
+        private Button btnCancelar;
         private DateTimePicker dateTimePicker1;
+        private Button btnEditar;
+        private Button btnApagar;
     }
 }

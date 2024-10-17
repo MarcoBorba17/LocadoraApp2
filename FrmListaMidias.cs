@@ -51,17 +51,21 @@ namespace LocadoraApp2
             DgvListaMidias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
-        private void DgvListaMidias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvListaMidias_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //Verificar se clicou em uma linha válida
-            if (e.RowIndex == 0) 
+            if (e.RowIndex == 0)
             {
                 //Pega a linha selecionada pelo usuário
                 DataGridViewRow linha = DgvListaMidias.Rows[e.RowIndex];
 
                 int MidiaId = (int)linha.Cells["MidiaId"].Value;
 
-                MessageBox.Show($"ID {MidiaId}");
+                FrmNovaMidia frmNovaMidia = new FrmNovaMidia(MidiaId);
+                frmNovaMidia.ShowDialog();
+
+                CarregaDadosDGV();
+            }
         }
     }
 }
