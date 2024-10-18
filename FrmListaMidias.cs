@@ -48,7 +48,7 @@ namespace LocadoraApp2
             DgvListaMidias.Columns["ClassificacaoIndicativa"].Visible = false;
             DgvListaMidias.Columns["Sinopse"].Visible = false;
             //Redimenciona as colunas
-            DgvListaMidias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill;
+            DgvListaMidias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void DgvListaMidias_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

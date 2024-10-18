@@ -45,11 +45,12 @@
             txtSinopse = new TextBox();
             btnSalvar = new Button();
             btnCancelar = new Button();
-            dateTimePicker1 = new DateTimePicker();
             btnEditar = new Button();
             btnApagar = new Button();
+            numDataLancamento = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)numCodigo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numDuracao).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numDataLancamento).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -63,9 +64,9 @@
             // 
             // txtTitulo
             // 
-            txtTitulo.Location = new Point(12, 110);
+            txtTitulo.Location = new Point(17, 110);
             txtTitulo.Name = "txtTitulo";
-            txtTitulo.Size = new Size(376, 31);
+            txtTitulo.Size = new Size(371, 31);
             txtTitulo.TabIndex = 1;
             // 
             // txtAutor
@@ -199,16 +200,6 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.CustomFormat = "yyyy";
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(14, 239);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(300, 31);
-            dateTimePicker1.TabIndex = 19;
-            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
-            // 
             // btnEditar
             // 
             btnEditar.Location = new Point(366, 389);
@@ -228,15 +219,23 @@
             btnApagar.Text = "Apagar";
             btnApagar.UseVisualStyleBackColor = true;
             // 
+            // numDataLancamento
+            // 
+            numDataLancamento.Location = new Point(12, 235);
+            numDataLancamento.Name = "numDataLancamento";
+            numDataLancamento.Size = new Size(376, 31);
+            numDataLancamento.TabIndex = 22;
+            numDataLancamento.ValueChanged += numDataLancamento_ValueChanged;
+            // 
             // FrmNovaMidia
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSalmon;
             ClientSize = new Size(800, 450);
+            Controls.Add(numDataLancamento);
             Controls.Add(btnApagar);
             Controls.Add(btnEditar);
-            Controls.Add(dateTimePicker1);
             Controls.Add(btnCancelar);
             Controls.Add(btnSalvar);
             Controls.Add(txtSinopse);
@@ -259,6 +258,7 @@
             Text = "Nova Midia";
             ((System.ComponentModel.ISupportInitialize)numCodigo).EndInit();
             ((System.ComponentModel.ISupportInitialize)numDuracao).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numDataLancamento).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -282,8 +282,8 @@
         private TextBox txtSinopse;
         private Button btnSalvar;
         private Button btnCancelar;
-        private DateTimePicker dateTimePicker1;
         private Button btnEditar;
         private Button btnApagar;
+        private NumericUpDown numDataLancamento;
     }
 }

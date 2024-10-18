@@ -43,7 +43,8 @@ namespace LocadoraApp2
             txtSinopse.Text = MidiaAtual.Sinopse;
             txtAutor.Text = MidiaAtual.Autor;
             cmbGenero.Text = MidiaAtual.Genero;
-            cmbClassificacao.Text = MidiaAtual.ClassicacaoIndicativa;
+            cmbClassificacao.Text = MidiaAtual.ClassificacaoIndicativa;
+            numDataLancamento.Value = MidiaAtual.Ano;
         }
 
         // Retorna uma Midia do Banco de Dados
@@ -61,6 +62,7 @@ namespace LocadoraApp2
             txtAutor.ReadOnly = status;
             txtSinopse.ReadOnly = status;
             numDuracao.ReadOnly = status;
+            numDataLancamento.ReadOnly = status;
 
             cmbGenero.Enabled = !status;
             cmbClassificacao.Enabled = !status;
@@ -83,7 +85,7 @@ namespace LocadoraApp2
                     MidiaAtual.Sinopse = txtSinopse.Text;
                     MidiaAtual.Autor = txtAutor.Text;
                     MidiaAtual.Duracao = (int)numDuracao.Value;
-                    MidiaAtual.ClassicacaoIndicativa = cmbClassificacao.SelectedItem.ToString();
+                    MidiaAtual.ClassificacaoIndicativa = cmbClassificacao.SelectedItem.ToString();
                     MidiaAtual.Genero = cmbGenero.SelectedItem.ToString();
                     MidiaAtual.Ano = 2024;
 
@@ -109,7 +111,7 @@ namespace LocadoraApp2
                     cmbGenero.SelectedItem.ToString(),
                     cmbClassificacao.SelectedItem.ToString(),
                     (int)numDuracao.Value,
-                    int.Parse(dateAnoLancmento.Value.ToString())
+                    (int)numDataLancamento.Value
                 );
             }
         }
@@ -137,7 +139,7 @@ namespace LocadoraApp2
                     Autor = autor,
                     Sinopse = sinopse,
                     Genero = genero,
-                    ClassicacaoIndicativa = classificacaoIndicativa,
+                    ClassificacaoIndicativa = classificacaoIndicativa,
                     Duracao = duracao,
                     Ano = ano
                 };
@@ -224,6 +226,11 @@ namespace LocadoraApp2
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numDataLancamento_ValueChanged(object sender, EventArgs e)
         {
 
         }

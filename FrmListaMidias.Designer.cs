@@ -40,7 +40,7 @@
             DgvListaMidias.RowHeadersWidth = 62;
             DgvListaMidias.Size = new Size(776, 426);
             DgvListaMidias.TabIndex = 0;
-            DgvListaMidias.CellContentClick += DgvListaMidias_CellContentClick;
+            DgvListaMidias.CellDoubleClick += DgvListaMidias_CellDoubleClick;
             DgvListaMidias.DockChanged += FrmListaMidias_Load;
             // 
             // FrmListaMidias
